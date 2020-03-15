@@ -1,0 +1,26 @@
+{
+  "name": "baidu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "baidu.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lhx980925/baidu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lhx980925/baidu/issues"
+  },
+  "homepage": "https://github.com/Lhx980925/baidu#readme",
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-htmlmin": "^3.1.0",
+    "grunt-contrib-uglify": "^4.0.1"
+  }
+}
