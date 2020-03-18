@@ -20,7 +20,7 @@ $(function() {
   })
   
   $join.click(function(){
-    if(!judge) return;
+    if(!validate1('#user') || !validate2('#phone') || !validate3('#password') || !validate4('#test')) return;
   })
   
   $user.focusout(function(){
