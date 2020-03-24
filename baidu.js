@@ -8,14 +8,25 @@ $(function() {
       $user3=$('#user-test'),
       $phone3=$('#phone-test'),
       $password3=$('#password-test'),
-      $test3=$('#test-test'),
       $getTest=$('#getTest');
+  
+  var i=59,
+      timer;
 
   $getTest.click(function(){
     if(/^1[3456789]\d{9}$/.test($phone.val())){
-      $test3.html('正在发送验证码...');
+      timer=window.setInterval(function() {
+        $getTest.val('正在发送 (' + i-- + ' s)');
+        $getTest.attr('disabled','true');
+        if(i === -1) {
+          window.clearInterval(timer);
+          $getTest.val('获取验证码');
+          $getTest.removeAttr('disabled');
+          i=59;
+        }
+      }, 1000);
     }else{
-      $test3.html('请求超时，请稍候再试');
+      judge=validate2('#phone');
     }
   })
   
